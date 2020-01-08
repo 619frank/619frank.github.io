@@ -5,20 +5,24 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        Frank David 
+      <div>
+        <h6>Software Engineer</h6>
+        <p>Technology stack:</p>
+        <p>  Node js (Express js)</p>
+        <p>  React</p>
+       <p> Databases:</p>
+       <p>   Mysql</p>
+       <p>   Postgres</p>
+       <p>   Mongodb</p>
+       <p>   Dynamodb</p>
+       <p>   Cassandra</p>
+       <p> Others:</p>
+       <p>  git</p>
+       <p>  docker</p>
+       <p>  CI/CD (circle CI, aws code pipeline)</p>
+       <p>  AWS</p>
+      </div>
     </div>
   );
 }
