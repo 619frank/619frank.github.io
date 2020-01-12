@@ -1,30 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Pages from './pages';
 
 function App() {
-  return (
-    <div className="App">
-        Frank David 
-      <div>
-        <h6>Software Engineer</h6>
-        <p>Technology stack:</p>
-        <p>  Node js (Express js)</p>
-        <p>  React</p>
-       <p> Databases:</p>
-       <p>   Mysql</p>
-       <p>   Postgres</p>
-       <p>   Mongodb</p>
-       <p>   Dynamodb</p>
-       <p>   Cassandra</p>
-       <p> Others:</p>
-       <p>  git</p>
-       <p>  docker</p>
-       <p>  CI/CD (circle CI, aws code pipeline)</p>
-       <p>  AWS</p>
-      </div>
-    </div>
-  );
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    // NOTE: Use your username below
+    fetch('https://gitconnected.com/v1/portfolio/619frank')
+      .then(res => res.json())
+      .then(user => {
+        setUser(user);
+      });
+  }, []);
+
+  if (!user) {
+    return <div />;
+  }
+
+  return <Pages user={user} />;
 }
 
 export default App;
